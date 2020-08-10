@@ -1,0 +1,24 @@
+Differences between Recursion 递归 and Iteration 迭代:
+1. A conditional statement decides the termination of recursion while a control variable’s value decide the termination of the iteration statement (except in the case of a while loop).
+2. Infinite recursion can lead to system crash whereas, infinite iteration consumes CPU cycles.
+3. Recursion is to repeatedly call the function itself to realize the loop.
+4. There must be iteration in recursion, but there is not necessarily recursion in iteration
+5. Recursion repeatedly invokes the mechanism, and consequently the overhead, of method calls. This can be expensive in both processor time and memory space while iteration doesn’t.
+
+Code expamle:
+Recursion:
+public  int fibo(int n){
+    if (n != 1 && n != 2){
+        result = fibo(n-1) + fibo(n-2);
+        return result;
+    }
+    else
+        return 1;	
+}
+
+Iteration:
+int v=1;
+for(i=2;i<=100;i++)
+{
+    v=v+i;
+}
