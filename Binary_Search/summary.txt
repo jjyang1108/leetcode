@@ -1,0 +1,19 @@
+Basic Template:
+
+int left=0,right=len(arr);
+while(left<right){
+    int mid=left+(right-left)/2;
+    if(condition(mid)){
+        right=mid;
+    }
+    else left=mid+1;
+}
+return left;
+
+Decide return value:
+After exiting while loop, left is the minimal k satisfying condition function.
+1. minimal k satisfying condition, return left;
+2. maximal k satisfying !condition,return left-1;
+
+Boundary:
+set boundary includes all possible elements
